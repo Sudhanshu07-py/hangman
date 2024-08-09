@@ -1,8 +1,8 @@
-word_list = ["apple", "banana", "cherry", "grape", "orange", "pear"]
+word_list = ["apple", "cherry", "grape", "orange", "pear", "pineapple"]
 import random
 chosen_word = random.choice(word_list)
 guessed_letters = []  # To store guessed letters
-attempts = 6          # Number of allowed incorrect guesses
+attempts = 7         # Number of allowed incorrect guesses
 
 while attempts > 0:
     # Display the current state of the word (with underscores for unguessed letters)
@@ -11,7 +11,7 @@ while attempts > 0:
 
     # Ask the player for a guess
     guess = input("Guess a letter: ").lower()
-
+            
     # Check if the guess is valid (a single letter) and not already guessed
     if len(guess) == 1 and guess.isalpha() and guess not in guessed_letters:
         guessed_letters.append(guess)
